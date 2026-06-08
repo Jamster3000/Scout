@@ -1,12 +1,3 @@
-﻿"""
-Exports CLIP models to ONNX format for use in Scout.
-
-Models exported:
-  - CLIP ViT-B/16        (openai/clip-vit-base-patch16)
-  - MetaCLIP ViT-B/16    (facebook/metaclip-b16-fullcc2.5b)
-  - OpenCLIP ViT-B/16    (laion/CLIP-ViT-B-16-laion2B-s34B-b88K)
-"""
-
 import os
 import torch
 import numpy as np
