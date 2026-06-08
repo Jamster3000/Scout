@@ -1,9 +1,11 @@
 # Scout - Model Conversion
 
-One-time script to export the CLIP model's to ONNX format to be compatable and usable in the Rust backend (see rust branch)
+This is a one time developer script that I used to convert the models to ONNX format.
+
+The current builds of CLIP models on huggingface are used with pytorch. Given the use of rust, I wrote this python script to convert those models to ONNX which is can then be used with rust (through the `ort` crate)
 
 ## Output
-It will generate a new `models/` folder which it converts the 16-vit-clip model into a image_encoder and text_encoder
+It will create a `models` folder which downloads the ViT-B/16 and metaclip models from huggingface and converts them into `image_encoder` and `text_encoder` in their respective folders inside `models`
 
 ## Setup
 Used with Python 3.13
@@ -14,12 +16,9 @@ Used with Python 3.13
 
 `python convert_model.py`
 
-Can also be more specific
+# Mobileclip
+This model is an apple model, I didn't add this converstion into the script because it had a different process
 
-```bash
-python convert_model.py --encoder image
-python convert_model.py --encoder text
-python convert_model.py --model openai/clip-vit-base-patch32
-```
+https://huggingface.co/memojo/mobileclip-s2-onnx/tree/main
 
-Running the image encoder and text encoder is useful if hitting memory issues (I ran with 16GB and still hit memory issues)
+The mobile clip image and text encoding models can be found here.
