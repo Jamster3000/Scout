@@ -1,6 +1,8 @@
 # Scout
 **Artifical Intellegence powered Visual search for local image library**
 
+> NOTE: This python version is no longer maintained and should not get updates anymore. I have moved onto a more improved rust version (see the main branch)
+
 Scout uses Advanced AI (CLIP embeddings) to let you seacah through your images using natural language (keywords/tags). No manual tags or organization. Just index a folder of images into the application and search a keyword to see the images in the folder appear from most relevant to the search.
 
 Originally, this was build for local battlemap collections for D&D games. This was something I needed with other 10K of battlemap images and no possible way to easily and quickly find exactly what I want in it. Scout works vrilliantly with any image collection: photos, game assets, design resources, and more.
